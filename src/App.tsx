@@ -1,6 +1,7 @@
 import { useState } from "react";
 import FiltersBuilder from "filters-builder";
 import getItitialConditions from "./utils/getInitialConditions";
+import { fields, operators } from "./data";
 
 import "filters-builder/styles";
 
@@ -21,8 +22,17 @@ export default function App() {
       </header>
 
       <main>
-        {/* <FiltersBuilder conditions={conditions} onChange={handleChange} /> */}
+        <FiltersBuilder
+          conditions={conditions}
+          fields={fields}
+          operators={operators}
+          onChange={handleChange}
+        />
       </main>
+
+      <pre style={{ padding: "4rem" }}>
+        {JSON.stringify(conditions, null, 2)}
+      </pre>
     </div>
   );
 }
