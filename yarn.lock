@@ -720,6 +720,17 @@ filters-builder@./packages/filters-builder-v1.0.0.tgz:
     react-error-boundary "^3.1.4"
     uuid "^8.3.2"
 
+filters-builder@./packages/filters-builder-v1.0.1.tgz:
+  version "1.0.1"
+  resolved "./packages/filters-builder-v1.0.1.tgz#5394886bf2fb5e7e19fec621c9460d34037ba754"
+  dependencies:
+    "@ant-design/icons" "^4.7.0"
+    antd "^4.21.5"
+    react "17.0.2"
+    react-dom "17.0.2"
+    react-error-boundary "^3.1.4"
+    uuid "^8.3.2"
+
 fsevents@~2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
