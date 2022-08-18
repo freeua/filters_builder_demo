@@ -24,7 +24,7 @@ export default function App() {
       <main>
         <FiltersBuilder
           conditions={conditions}
-          fields={fields}
+          fields={fields as any}
           operators={operators}
           onChange={handleChange}
         />
