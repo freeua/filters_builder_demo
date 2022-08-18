@@ -30,9 +30,11 @@ export default function App() {
         />
       </main>
 
-      <pre style={{ padding: "4rem" }}>
-        {JSON.stringify(conditions, null, 2)}
-      </pre>
+      <div className='code-wrapper'>
+        <div className='code-block'>
+          <pre>{JSON.stringify(conditions, null, 2)}</pre>
+        </div>
+      </div>
     </div>
   );
 }
