@@ -1,6 +1,4 @@
-import { Field } from "filters-builder/dist/types";
-
-export const fields: Field[] = [
+export const fields = [
   {
     fact: "name",
     objectPath: "$.name",
@@ -20,22 +18,21 @@ export const fields: Field[] = [
     type: "category",
     items: [
       {
-        fact: "profile.avatar_color",
-        objectPath: "$.profile.avatar_color",
-        label: "Avatar Color",
+        fact: "profile.favourite_animal",
+        objectPath: "$.profile.favourite_animal",
+        label: "Favourite Animal",
+        type: "string",
+      },
+      {
+        fact: "profile.favourite_color",
+        objectPath: "$.profile.favourite_color",
+        label: "Favourite Color",
         type: "list",
         listValue: [
           { value: "red", label: "Red" },
           { value: "yellow", label: "Yellow" },
           { value: "blue", label: "Blue" },
         ],
-      },
-      {
-        fact: "profile.register_date",
-        objectPath: "$.profile.register_date",
-        label: "Register Date",
-        type: "date",
-        format: "DD-MM-YYYY",
       },
     ],
   },
@@ -44,6 +41,13 @@ export const fields: Field[] = [
     objectPath: "$.iaAdmin",
     label: "Is Admin",
     type: "bool",
+  },
+  {
+    fact: "register_date",
+    objectPath: "$.register_date",
+    label: "Register Date",
+    type: "date",
+    format: "DD-MM-YYYY",
   },
 ];
 
@@ -80,3 +84,36 @@ export const operators = {
     { id: "dThisMonth", label: "This Month" },
   ],
 };
+
+export const testData = [
+  {
+    name: "John Doe",
+    age: 23,
+    profile: {
+      favourite_animal: "cat",
+      favourite_color: "red",
+    },
+    iaAdmin: false,
+    register_date: "03-08-2022",
+  },
+  {
+    name: "Andrea Summer",
+    age: 19,
+    profile: {
+      favourite_animal: "elephant",
+      favourite_color: "yellow",
+    },
+    iaAdmin: true,
+    register_date: "18-08-2022",
+  },
+  {
+    name: "Andrey Jonson",
+    age: 32,
+    profile: {
+      favourite_animal: "tiger",
+      favourite_color: "red",
+    },
+    iaAdmin: true,
+    register_date: "12-10-2021",
+  },
+];
