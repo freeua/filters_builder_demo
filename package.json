@@ -9,14 +9,16 @@
   },
   "dependencies": {
     "antd": "^4.22.6",
-    "filters-builder": "./packages/filters-builder-v1.0.2.tgz",
+    "filters-builder": "./packages/filters-builder-v1.0.4.tgz",
     "json-rules-engine": "^6.1.2",
+    "moment": "^2.29.4",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
     "@types/antd": "^1.0.0",
     "@types/json-rules-engine": "^4.1.0",
+    "@types/moment": "^2.13.0",
     "@types/react": "17.0.2",
     "@types/react-dom": "17.0.2",
     "@vitejs/plugin-react": "^1.3.0",

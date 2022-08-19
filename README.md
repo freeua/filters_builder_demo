@@ -33,3 +33,9 @@ or
 ```bash
 npm i ./<path-to-packages>/<file-name>.tgz
 ```
+
+## Operator Functions
+
+Implemented json-rule-engine testing in [src/engine.ts](./src/engine.ts) and operator evaluators are placed in [src/utils/operatorEvaluators.ts](./src/utils/operatorEvaluators.ts)
+
+Notice that **nested facts rules not developed**, please check [this issue](https://github.com/CacheControl/json-rules-engine/issues/7) to add this functionality to your project

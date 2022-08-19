@@ -1,55 +1,4 @@
-export const fields = [
-  {
-    fact: "name",
-    objectPath: "$.name",
-    label: "Full Name",
-    type: "string",
-  },
-  {
-    fact: "age",
-    objectPath: "$.age",
-    label: "Age",
-    type: "number",
-    min: 13,
-    max: 99,
-  },
-  {
-    label: "Profile",
-    type: "category",
-    items: [
-      {
-        fact: "profile.favourite_animal",
-        objectPath: "$.profile.favourite_animal",
-        label: "Favourite Animal",
-        type: "string",
-      },
-      {
-        fact: "profile.favourite_color",
-        objectPath: "$.profile.favourite_color",
-        label: "Favourite Color",
-        type: "list",
-        listValue: [
-          { value: "red", label: "Red" },
-          { value: "yellow", label: "Yellow" },
-          { value: "blue", label: "Blue" },
-        ],
-      },
-    ],
-  },
-  {
-    fact: "iaAdmin",
-    objectPath: "$.iaAdmin",
-    label: "Is Admin",
-    type: "bool",
-  },
-  {
-    fact: "register_date",
-    objectPath: "$.register_date",
-    label: "Register Date",
-    type: "date",
-    format: "DD-MM-YYYY",
-  },
-];
+// Operators
 
 export const operators = {
   string: [
@@ -83,37 +32,119 @@ export const operators = {
     { id: "dThisWeek", label: "This Week" },
     { id: "dThisMonth", label: "This Month" },
   ],
-};
+} as const;
+
+export const operatorIds = Object.keys(operators).flatMap((fieldType) =>
+  operators[fieldType as keyof typeof operators].map(({ id }) => id)
+);
+
+// Fields
+
+export const fieldTypes = Object.keys(operators) as [keyof typeof operators];
+
+export const DATE_FORMAT = "DD-MM-YYYY";
+
+export const fields: {
+  type: typeof fieldTypes[number] | "category";
+  [key: string]: any;
+}[] = [
+  {
+    fact: "name",
+    objectPath: "$.name",
+    label: "Full Name",
+    type: "string",
+  },
+  {
+    fact: "iaAdmin",
+    objectPath: "$.iaAdmin",
+    label: "Is Admin",
+    type: "bool",
+  },
+  {
+    fact: "age",
+    objectPath: "$.age",
+    label: "Age",
+    type: "number",
+    min: 13,
+    max: 99,
+  },
+  {
+    fact: "avatar_color",
+    objectPath: "$.avatar_color",
+    label: "Avatar Color",
+    type: "list",
+    listValue: [
+      { value: "red", label: "Red" },
+      { value: "yellow", label: "Yellow" },
+      { value: "blue", label: "Blue" },
+    ],
+  },
+  {
+    fact: "register_date",
+    objectPath: "$.register_date",
+    label: "Register Date",
+    type: "date",
+    format: DATE_FORMAT,
+  },
+  {
+    label: "Other",
+    type: "category",
+    items: [
+      {
+        fact: "other.favourite_animal",
+        objectPath: "$.other.favourite_animal",
+        label: "Favourite Animal",
+        type: "string",
+      },
+      {
+        fact: "other.favourite_color",
+        objectPath: "$.other.favourite_color",
+        label: "Favourite Color",
+        type: "list",
+        listValue: [
+          { value: "red", label: "Red" },
+          { value: "yellow", label: "Yellow" },
+          { value: "blue", label: "Blue" },
+        ],
+      },
+    ],
+  },
+];
+
+// Test data
 
 export const testData = [
   {
     name: "John Doe",
+    iaAdmin: false,
     age: 23,
-    profile: {
+    avatar_color: "red",
+    register_date: "03-08-2022",
+    other: {
       favourite_animal: "cat",
       favourite_color: "red",
     },
-    iaAdmin: false,
-    register_date: "03-08-2022",
   },
   {
     name: "Andrea Summer",
+    iaAdmin: true,
     age: 19,
-    profile: {
-      favourite_animal: "elephant",
+    avatar_color: "yellow",
+    register_date: "18-08-2022",
+    other: {
+      favourite_animal: "",
       favourite_color: "yellow",
     },
-    iaAdmin: true,
-    register_date: "18-08-2022",
   },
   {
     name: "Andrey Jonson",
+    iaAdmin: true,
     age: 32,
-    profile: {
+    avatar_color: "red",
+    register_date: "12-10-2021",
+    other: {
       favourite_animal: "tiger",
       favourite_color: "red",
     },
-    iaAdmin: true,
-    register_date: "12-10-2021",
   },
 ];
