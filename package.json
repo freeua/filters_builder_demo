@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "antd": "^4.22.6",
-    "filters-builder": "./packages/filters-builder-v1.0.4.tgz",
+    "filters-builder": "./packages/filters-builder-v1.0.9.tgz",
     "json-rules-engine": "^6.1.2",
     "moment": "^2.29.4",
     "react": "17.0.2",
