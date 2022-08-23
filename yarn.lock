@@ -415,7 +415,7 @@ ansi-styles@^3.2.1:
   dependencies:
     color-convert "^1.9.0"
 
-antd@*, antd@^4.21.5, antd@^4.22.6, antd@^4.22.7:
+antd@*, antd@^4.21.5, antd@^4.22.6:
   version "4.22.7"
   resolved "https://registry.yarnpkg.com/antd/-/antd-4.22.7.tgz#3c94bbc37466a727f6f4eac2ca6adb5fb0eb7a25"
   integrity sha512-CMf5tYHtlhP1blYjwNTRsB7G/bocwKmIFHgYYk4pZNgo1kk/XnPPI2/MKRCXWc54wuCQQlnmL/2AKtE7HWaE8g==
@@ -740,21 +740,9 @@ eventemitter2@^6.4.4:
   resolved "https://registry.yarnpkg.com/eventemitter2/-/eventemitter2-6.4.7.tgz#a7f6c4d7abf28a14c1ef3442f21cb306a054271d"
   integrity sha512-tYUSVOGeQPKt/eC1ABfhHy5Xd96N3oIijJvN3O9+TsC28T5V9yX9oEfEK5faP0EFSNVOG97qtAS68GBrQB2hDg==
 
-filters-builder@./packages/filters-builder-v1.0.8.tgz:
-  version "1.0.8"
-  resolved "./packages/filters-builder-v1.0.8.tgz#1c908558c6ead51f6c92e4395356914eaf1651cb"
-  dependencies:
-    "@ant-design/icons" "^4.7.0"
-    antd "^4.22.7"
-    moment "2.24.0"
-    react "17.0.2"
-    react-dom "17.0.2"
-    react-error-boundary "^3.1.4"
-    uuid "^8.3.2"
-
-filters-builder@./packages/filters-builder-v1.0.9.tgz:
-  version "1.0.9"
-  resolved "./packages/filters-builder-v1.0.9.tgz#d67e29f4b9632df28d955c48d8583bb47de4f5c8"
+filters-builder@./packages/filters-builder-v1.0.10.tgz:
+  version "1.0.10"
+  resolved "./packages/filters-builder-v1.0.10.tgz#1fd2a3294381180c64fde068c5187db62ed9cb5a"
   dependencies:
     "@ant-design/icons" "^4.7.0"
     antd "^4.21.5"
@@ -924,11 +912,6 @@ moment@*, moment@^2.24.0, moment@^2.29.2, moment@^2.29.4:
   version "2.29.4"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
   integrity sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==
-
-moment@2.24.0:
-  version "2.24.0"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
-  integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
 
 ms@2.1.2:
   version "2.1.2"
