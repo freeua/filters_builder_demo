@@ -80,6 +80,18 @@ export const fields: {
     ],
   },
   {
+    fact: "visitor",
+    objectPath: "$.session.page.url",
+    label: "Page Url",
+    type: "string",
+  },
+  {
+    fact: "visitor",
+    objectPath: "$.session.page.referrer",
+    label: "Page Referrer",
+    type: "string",
+  },
+  {
     fact: "register_date",
     objectPath: "$.register_date",
     label: "Register Date",
