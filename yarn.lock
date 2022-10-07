@@ -790,9 +790,9 @@ eventemitter2@^6.4.4:
   resolved "https://registry.yarnpkg.com/eventemitter2/-/eventemitter2-6.4.7.tgz#a7f6c4d7abf28a14c1ef3442f21cb306a054271d"
   integrity sha512-tYUSVOGeQPKt/eC1ABfhHy5Xd96N3oIijJvN3O9+TsC28T5V9yX9oEfEK5faP0EFSNVOG97qtAS68GBrQB2hDg==
 
-filters-builder@./packages/filters-builder-v1.0.12.tgz:
-  version "1.0.12"
-  resolved "./packages/filters-builder-v1.0.12.tgz#ae6f875b498f24242604f82ac97d4bfac2f74a2b"
+filters-builder@./packages/filters-builder-v1.0.13.tgz:
+  version "1.0.13"
+  resolved "./packages/filters-builder-v1.0.13.tgz#2690396eb00b3920aeb49b81ad0c412938e95adf"
   dependencies:
     "@ant-design/icons" "^4.7.0"
     antd "^4.21.5"
